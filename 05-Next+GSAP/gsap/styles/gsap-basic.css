@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .gsap-basic-container {
+    @apply mx-auto max-w-3xl ring-1 bg-zinc-900 ring-zinc-300/20 xl:max-w-5xl min-h-screen p-10;
+  }
+
+  .gsap-basic-container code {
+    @apply font-mono text-sm bg-zinc-900 text-orange-400 p-1;
+  }
+
+  .gsap-basic-container h1 {
+    @apply text-3xl font-bold text-zinc-50;
+  }
+
+  .gsap-basic-container a {
+    @apply text-blue-400 hover:text-blue-500;
+  }
+
+  .gsap-basic-container button {
+    @apply bg-slate-500 hover:bg-slate-600 text-zinc-50 px-4 py-2 rounded-md;
+  }
+}
+
+@layer utilities {
+  .gsap-basic-container {
+    @apply mx-auto max-w-3xl ring-1 bg-zinc-900 ring-zinc-300/20 xl:max-w-5xl min-h-screen p-10;
+  }
+}
