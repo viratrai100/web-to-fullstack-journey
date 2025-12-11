@@ -1,0 +1,90 @@
+Netlify aur Vercel jaise pure free-unlimited nahi hote Render, Railway, AWS, DigitalOcean — unme mostly free tier (trial) milta hai, jisme thoda limit hota hai 👇
+
+1. Render
+
+Free Tier: ✅ haan, backend + frontend dono free deploy kar sakte ho
+
+Limits:
+
+750 free hours per month (≈ 1 service running full month)
+
+512 MB RAM
+
+Sleep ho jaata hai agar traffic na aaye
+
+2. Railway
+
+Free Tier: ✅ haan
+
+Limits:
+
+$5 credit per month (matlab chhote project free chal jaayenge)
+
+Thoda usage cross karte hi paid plan chahiye
+
+3. AWS (Amazon Web Services)
+
+Free Tier: ✅ haan, par 1 year ke liye hi free
+
+Limits:
+
+750 hours EC2 (server)
+
+5GB S3 storage, 30GB database
+
+12 months ke baad → paid
+
+4. DigitalOcean
+
+Free Tier: ❌ No permanent free
+
+✅ Lekin $200 free credit dete hain 60 days ke liye
+
+Uske baad paid karna padta hai
+
+Shortcut Rule
+
+Free unlimited frontend → Netlify, Vercel
+
+Free fullstack (with limits) → Render, Railway
+
+Trial only (1 yr ya 60 days) → AWS, DigitalOcean
+
+
+
+
+
+
+
+
+“750 free hours per month” ka matlab ye hai 👇
+
+1 mahine me ~30 din hote hain → 30 × 24 = 720 ghante
+
+Agar koi service (jaise backend server) non-stop 24/7 chalti rahe, to usko ek poore mahine ke liye ~720 ghante chahiye.
+
+To jab koi platform bolta hai 750 free hours/month, iska matlab:
+👉 Tum ek service ko poore mahine 24/7 free chala sakte ho.
+👉 Ya phir multiple services thode-thode time ke liye chalaoge to sabka total 750 hours free milega.
+
+Example:
+
+Ek project full month chalayoge → covered.
+
+Do projects chalayoge → dono ko half-half month free milega (kyunki total 750 hours hi free hai).
+
+
+
+⚡ Compare karke dekho:
+
+Render → Easy, free tier, beginners ke liye best.
+
+Railway → Similar hai Render jaise, thoda developer-friendly UI.
+
+AWS / DigitalOcean → Zyada powerful, but beginner ke liye complex + billing details chahiye.
+
+Vercel / Netlify → Sirf frontend (React, Next.js, static sites) ke liye best, backend limited.
+
+🔑 Conclusion:
+👉 Ek project ke liye → Render best hai.
+👉 Agar professional / large scale project banega future me → AWS ya DigitalOcean sochna.
