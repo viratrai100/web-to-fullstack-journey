@@ -1,0 +1,20 @@
+
+// basic Command :- 
+// npm init -y chalane se ek package.json file ban jati hai default settings ke sath, aur tumse koi question nahi poochta.
+
+// npm install express.js
+// npm i -g nodemon 
+// npx nodemon index.js 
+// npm install ejs
+
+// Notes Making Webpath
+
+// some issues of node => someIssuesOfNode.txt
+// some issues of node => someissuesofnode.txt
+
+
+// "virat kb sona hai".split(' ')
+// (4) ['virat', 'kb', 'sona', 'hai']
+// "virat kb sona hai".split(' ').join('')
+// 'viratkbsonahai'
+
