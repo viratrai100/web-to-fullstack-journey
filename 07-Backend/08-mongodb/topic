@@ -1,0 +1,86 @@
+Data Storage :- 
+         user ke info ko store kar ke rakhta hai
+         data storage ka matlab hai data ko future me use karne ke liye kahin save karna.
+
+% -------------------------------------------------------------------------------------------------------------
+        File - data.txt -> can't store :- images, videos, big files 
+        Database :- store almost everything :- Text,number,date&TimeRanges,image,audio,video, file and document(pdf,WebTransportDatagramDuplexStream,excel)
+
+File = ek notebook jisme tum likh dete ho.
+Database = ek library jisme har book alag shelf pe properly index ke sath rakhi hoti hai, jise tum fast search, update, sort kar sakte ho.
+
+% -------------------------------------------------------------------------------------------------------------
+
+Types Of DBS
+          1. Relational Database (RDBMS) → Data tables (rows & columns) me hota hai, fixed structure hota hai. Example: SQL
+
+          2. NoSQL Database → Data flexible format me hota hai - documents, Example: MongoDB
+   
+% -------------------------------------------------------------------------------------------------------------          
+
+What and Why
+           IN ORDER TO STORE DATA
+
+% -------------------------------------------------------------------------------------------------------------
+
+Terminologies - > collections, documents, schemes, keys, models
+
+             Database -> Collection -> document
+% -------------------------------------------------------------------------------------------------------------
+
+ CODE                                            DATABASE
+% -------------------------------------------------------------------------------------------------------------
+mongoose.connect              ->                databse create
+model create                  ->                Collection
+create code                   ->                document
+% -------------------------------------------------------------------------------------------------------------
+
+
+mongodb installation
+mongodb connection 
+schema 
+model 
+crud
+
+% -------------------------------------------------------------------------------------------------------------
+
+npm init -y   -> to create package.json file
+
+default :-  "main": "index.js",
+Do This :-  "main": "app.js",   and create app.js file 
+
+npm install express
+npm i mongoose
+mongoose help to talk(connect) node server with mongo server
+Mongoose basically Node.js server ko MongoDB server ke saath baat (connect) karne me help karta hai, aur saath hi data ka format aur rules bhi manage karta hai.
+
+npx nodemon app.js
+
+Basic Confusion -> 
+
+Nodejs,Express.js, MongoDb and Firebase.
+
+% -----------------------------------------------------------------------------------------------------------------------
+
+Short Explanation
+       Firebase → Ready-made backend service (database + auth + storage).
+       MongoDB → Only database, aapko backend logic khud banana hota hai.
+       Express.js → Node.js me backend banane ka shortcut framework.
+       Node.js → Server pe JavaScript run karne ka engine.
+
+Story Example
+Socho aap ek restaurant khol rahe ho.
+
+       Node.js → Gas stove (server chalane ka engine).
+       Express.js → Chef ka kitchen plan (routes & logic).
+       MongoDB → Store room jaha raw materials (data) rakhe hain.
+       Firebase → Ready-made catering service jo khana, menu, waiter sab de deta hai — aapko sirf serve karna hai.
+
+
+// async use :- 
+        // mark await , then mark the nearest fuction async , then 
+
+// find   -> return array.
+// findOne  -> return Object.
+
+
