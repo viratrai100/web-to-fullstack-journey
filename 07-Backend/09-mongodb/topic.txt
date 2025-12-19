@@ -1,0 +1,20 @@
+npm init -y   -> to create package.json file
+
+default :-  "main": "index.js",
+Do This :-  "main": "app.js",   and create app.js file 
+
+npm install express
+npm install ejs 
+npm i mongoose
+npx nodemon app.js
+
+with ejs and server side render kaise perform hota hai
+
+Restaurant Story
+Express → Waiter jo customer ka order leke kitchen tak le jata hai.
+EJS → Menu card jo har customer ke hisaab se customize hota hai.
+Mongoose → Manager jo store room ka record sambhalta hai aur chef ko sahi samaan deta hai.
+MongoDB → Store room jisme saara maal (data: images, text, videos, etc.) rakha hota hai.
+
+
+
