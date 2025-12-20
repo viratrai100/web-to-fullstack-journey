@@ -1,0 +1,82 @@
+📌 Authentication & Authorization
+
+
+send → "Bas yeh le, direct content de diya."
+render → "Template me data bharke bhej diya."
+redirect → "Waha jao, main yaha kaam nahi kar raha."
+
+basic commands
+npm init -y
+npm install jsonwebtoken
+npm install bcrypt
+npm install express
+
+
+📌 Shortcut Trick yaad rakhne ka:
+Authentication = Identity check ("Tum kaun ho?")
+Authorization = Permission check ("Tum kya kar sakte ho?")
+
+Cookies:- 
+Browser ke andar chhoti si file hoti hai jisme server tumhare baare me chhoti info store karta hai (jaise login token, user id, etc.).
+Jab tum same website pe wapas aate ho, browser wo cookie server ko bhej deta hai, taaki server tumhe pehchan sake.
+
+Authentication me help :-
+Cookie me ek session ID ya token store hota hai.
+Jab tum next request bhejte ho, server cookie dekh ke confirm karta hai ki tum already logged in ho.
+
+Authorization me help :- 
+Cookie me tumhare role (admin, user, guest) ka info ho sakta hai.
+Server is role ke hisaab se decide karta hai ki tumhe kaunsa page ya action allowed hai.
+
+
+JWT -> JSON Web Token
+JWT (JSON Web Token) → A digital token used to verify a user's identity without storing session on the server.
+       JWT ka fayda:
+       Server ko session store karne ki zaroorat nahi hoti (stateless).
+       Secure tarike se info transfer hoti hai.
+
+Bcrypt ->
+bcrypt → A library to securely hash and compare passwords so they’re not stored in plain text.
+     Fayda:
+     Agar database hack ho jaye, hacker ko asli password nahi milega.
+     Salt hone ki wajah se same password ka hash bhi alag hota hai.
+
+     Example with salt:
+Agar 10 users ka password 1234 hai, to sabka hash same hoga → easy to guess.
+Password: 1234 + Random Salt ($%&8#)
+Final Hash: 8hd7ajd8ajsd...
+
+Dusre user ka password 1234 + Alag Salt (@1ab!)
+Final Hash: 9f72ns7y28ds...
+👉 Ab dono ka hash different hoga, even though password same tha.
+
+
+npm init -y
+npm install jsonwebtoken
+npm install bcrypt
+npm install express
+
+
+npm i cookie-parser
+browser ke aap kisi bhi router pe jaye cookie hamesha aapke sath jayega.
+
+
+
+
+virrrrrrrrrrrrrrrrrr 
+$2b$10$hRMudHye8ibU9iQQ1oSxhebfzj8.M/5NgUkRtfzYpRm8k69Szydmy
+
+$2b$10$CjYNrtpchYiE01Gee3gmW.8cWN4Bouwh1I7uRtNcGRYS5cq.IloJu
+$2b$10$8WdB.IkCi991cFgfhtXyWu.vIygEkrNHOh3eVKNIPs9rCc1Re3Idu
+
+
+bcrypt -> user ke password ko encrypt aur decrypt kar deta hai ,
+encrypt = hash = 12345678 -> $uhfuh7hubvud8y8y8fvue8fy8hs88h8,
+decrypt = check ->  12345678 =  $uhfuh7hubvud8y8y8fvue8fy8hs88h8,  return true & false 
+
+
+
+jwt -> algorithm, data , verify signature.
+      data - > 
+    jwt -> we usually save email , because email is unique
+    req + string -> respond according to string   
