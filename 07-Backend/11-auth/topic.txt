@@ -1,0 +1,42 @@
+npm init -y
+npm install express
+npm install bcrypt
+npm install jsonwebtoken
+
+npm i ejs  -> write html-js code 
+npm i mongoose 
+
+npm i cookie-parser
+       -> browser ke aap kisi bhi router pe jaye cookie hamesha aapke sath jayega.
+
+
+
+create user account 
+       mongoose
+       schema
+       model
+       usercreate -> password -> hash 
+       jwt token -> cookie
+
+       login -> token -> decrypt -> email
+
+
+Model = Factory.
+👉 Ye schema ka use karke database me document banata, read karta, update, delete karta hai.
+
+Schema = Blueprint (naksha).
+👉 Ye define karta hai ki tumhare data ke fields aur unka type kya honge.
+
+CRUD
+
+CRUD = 4 basic operations jo database me hote hain.
+Create → Naya data insert karna
+Read → Data dekhna
+Update → Purane data ko badalna
+Delete → Data hata dena
+
+
+
+
+
+
