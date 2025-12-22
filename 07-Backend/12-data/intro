@@ -1,0 +1,29 @@
+
+
+koi bhi ecomerce ki website hai, aur hum uspe apna product list kiye
+     2option :- 
+     01 :- ya to uss product ko dono jagah list kar document
+                   probelm :- more code, more space
+
+    02 :- ys phir ak jagah product ko rakh do , aur dusri jagah product ID ko rakh do
+
+
+
+npm init -y
+npm install express
+npm i mongoose
+
+
+
+
+
+post banate huye user de diya gaya
+      to post ko pata hai ki user kaun hai.
+
+
+      aur user jaise hi ban gaya - to user ko post array me post ki id de diya
+
+
+ab -> user ke post ki ID hai, aur post ke pass user ki ID hai 
+           dono ke pass ek dusre ka efernce hai.
+           because of only Data Association.      
