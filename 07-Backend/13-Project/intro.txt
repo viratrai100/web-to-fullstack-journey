@@ -1,0 +1,66 @@
+Basic Commands :- 
+
+
+npm init -y
+npm i express 
+npm i mongoose  -> for data association
+npm i cookie-parser
+npm i jsonwebtoken
+npm i bcrypt
+npm i multer  -> to upload files
+
+npm i debug
+set DEBUG=development:*
+
+npm i config
+CONFIG.JS -> development Chal rha hai hai development se value uthayega , production chal rha hai to , production se value uthayega.
+
+npx nodemon app.js
+
+
+Basic Commands :-
+ npm i ejs
+
+
+
+npm i dotenv
+
+
+npm i express-session
+npm i connect-flash
+
+
+usermodel 
+full name -> string
+email  -> string
+password  -> string
+
+cart  -> array
+isadmin -> boolean   (agar admin hoga to product add kar sakta hai , user hoga to product order kar sakta hai)
+orders  -> array 
+Contact -> number
+picture -> db
+
+
+Product Details :-
+image
+name
+price
+discount
+bg color
+panelcolor
+text color
+
+
+
+-> signup or login  
+/shop -> shop
+/users/cart -> cart 
+/admin -> admin panel
+/owner/products -> show all products
+/owner/admin -> show admin panel to create products 
+
+
+virat
+virat@rai.com
+Virat@2025#Dev

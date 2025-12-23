@@ -1,0 +1,38 @@
+Basic Commands :-
+
+npm init -y
+npm i express
+npm i mongoose  -> for data association
+since we'r makig an aap so we use 
+ npm i bcrypt
+ npm i jsonwebtoken
+ npm i cookie-parser
+ npm i ejs
+
+
+ multer install :-  to upload files
+     npm i multer
+ 
+ npx nodemon app.js
+
+DiskStorage  -> Server ke liye
+The disk storage engine gives you full control on storing files to disk. 
+
+MemoryStorage  -> Database ke liye 
+The memory storage engine stores the files in memory as Buffer objects. It doesn't have any options.
+
+ 
+    DiskStorage
+
+    export , upload variable 
+    
+
+basic app ,
+          jaha user post likh paaye 
+          users create karne hain 
+          login and register 
+          logout
+          post creation
+          post like 
+          post delete -> only parent 
+
