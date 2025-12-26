@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Virat Ka Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h2>Virat Ka Chat App</h2></header>
+
+  <!-- User info section -->
+  <div class="user-info">
+    <label>Name: 
+      <input id="username" placeholder="Enter User Name"/>
+    </label>
+
+    <label>Avatar URL: 
+      <input id="avatarUrl" placeholder="Image URL (optional)"/>
+    </label>
+
+    <label>Upload Avatar: 
+      <input type="file" id="avatarFile" accept="image/*"/>
+    </label>
+  </div>
+
+  <!-- Message input -->
+  <div id="input-area">
+    <input id="message" placeholder="Enter message"/>
+    <button id="sendBtn">Send</button>
+  </div>
+
+  <!-- yaha saare messages show honge -->
+  <div id="messages"></div>
+
+
+  <!-- socket.io client -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();  // client connection create kiya
+
+    const sendBtn = document.getElementById("sendBtn");
+    const messageInput = document.getElementById("message");
+    const allMessages = document.getElementById("messages");
+    const usernameInput = document.getElementById("username");
+    const avatarUrlInput = document.getElementById("avatarUrl");
+    const avatarFileInput = document.getElementById("avatarFile");
+
+    // time formatter function
+    function formatTime(iso) {
+      const d = new Date(iso);
+      return `${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`;
+    }
+
+    // message render function
+    function renderMessage(msg) {
+      const isYou = msg.socketId === socket.id;
+
+      const container = document.createElement("div");
+      container.className = "msg" + (isYou ? " you" : "");
+
+      // avatar image
+      const img = document.createElement("img");
+      img.className = "avatar";
+      img.src = msg.avatar || "https://via.placeholder.com/40?text=User";
+      img.alt = msg.username || "User";
+
+      const content = document.createElement("div");
+
+      // username + time meta data
+      const meta = document.createElement("div");
+      meta.className = "meta";
+      meta.innerText = `${msg.username}${isYou ? " (You)" : ""} • ${formatTime(msg.time)}`;
+
+      // chat bubble
+      const bubble = document.createElement("div");
+      bubble.className = "bubble";
+      bubble.innerText = msg.text;
+
+      content.appendChild(meta);
+      content.appendChild(bubble);
+
+      container.appendChild(img);
+      container.appendChild(content);  // content container me
+      allMessages.appendChild(container); // container ko messages div me
+
+      // naya message tak scroll rahe
+      allMessages.scrollTop = allMessages.scrollHeight;
+    }
+
+    socket.on("message", (message) => { renderMessage(message); });
+
+    // 🔹 File ko Base64 me convert karne ka helper
+    function getBase64(file, callback) {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => callback(reader.result);
+    }
+
+    // send message function
+    function sendMessage() {
+      const text = messageInput.value.trim();
+      if (!text) return;
+
+      const username = usernameInput.value.trim() || "Anonymous";
+      const avatarUrl = avatarUrlInput.value.trim();
+      const file = avatarFileInput.files[0]; // NEW: check if file selected
+
+      if (file) {
+        // Agar file upload ki gayi hai → Base64 me convert karke bhejo
+        getBase64(file, (base64Image) => {
+          socket.emit("user-message", { username, avatar: base64Image, text });
+        });
+      } else {
+        // Agar sirf URL hai ya kuch bhi nahi
+        socket.emit("user-message", { username, avatar: avatarUrl || null, text });
+      }
+
+      messageInput.value = "";
+      messageInput.focus();
+    }
+
+    // socket.on("message", (message) => { renderMessage(message); });
+
+
+    sendBtn.addEventListener("click", sendMessage);
+
+    messageInput.addEventListener("keydown", (e) => { if (e.key === "Enter") sendMessage(); });
+  </script>
+</body>
+</html>
